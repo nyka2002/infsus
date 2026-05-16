@@ -1,0 +1,61 @@
+@model IEnumerable<RentIO.Models.Apartman>
+
+@{
+    ViewData["Title"] = "Apartmani";
+}
+
+<h1>Apartmani</h1>
+
+<p>
+    <a asp-action="Create">Dodaj apartman</a>
+</p>
+<form asp-action="Index" method="get">
+    <p>
+        Pretraži po nazivu ili lokaciji:
+        <input type="text" name="searchString" />
+        <input type="submit" value="Pretraži" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-secondary">Prikaži sve</a>
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lokacija)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cijena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Opis)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lokacija)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cijena)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Opis)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Uredi</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalji</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Obriši</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

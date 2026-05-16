@@ -1,0 +1,45 @@
+@model RentIO.Models.Apartman
+
+@{
+    ViewData["Title"] = "Brisanje apartmana";
+}
+
+<h1>Brisanje apartmana</h1>
+
+<h3>Jeste li sigurni da želite obrisati ovaj apartman?</h3>
+<div>
+    <h4>Apartman</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lokacija)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lokacija)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cijena)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cijena)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Opis)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Opis)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Obriši" class="btn btn-danger" /> |
+        <a asp-action="Index">Natrag na listu</a>
+    </form>
+</div>
