@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RentIO.Data;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +8,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddViewLocalization();
+
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("hr-HR");
+CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("hr-HR");
 
 var app = builder.Build();
 
