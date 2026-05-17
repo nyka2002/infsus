@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RentIO.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdb442ea7c4ac3a7010b7f00aa6d10738057e7d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7aab429f742656725d6c6939c25b09bd0cd6b005")]
 [assembly: System.Reflection.AssemblyProductAttribute("RentIO.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RentIO.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

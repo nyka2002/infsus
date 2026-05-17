@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/RentIO.csproj": {}
+    "/Users/nika_m/infsus/dz3/RentIO/RentIO.csproj": {}
   },
   "projects": {
-    "/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/RentIO.csproj": {
+    "/Users/nika_m/infsus/dz3/RentIO/RentIO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/RentIO.csproj",
+        "projectUniqueName": "/Users/nika_m/infsus/dz3/RentIO/RentIO.csproj",
         "projectName": "RentIO",
-        "projectPath": "/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/RentIO.csproj",
-        "packagesPath": "/Users/karlorastegorac/.nuget/packages/",
-        "outputPath": "/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/obj/",
+        "projectPath": "/Users/nika_m/infsus/dz3/RentIO/RentIO.csproj",
+        "packagesPath": "/Users/nika_m/.nuget/packages/",
+        "outputPath": "/Users/nika_m/infsus/dz3/RentIO/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/karlorastegorac/.nuget/NuGet/NuGet.Config"
+          "/Users/nika_m/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -48,13 +48,13 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[10.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[10.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -64,7 +64,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[10.0.4, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -72,7 +72,7 @@
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[10.0.1, )"
             }
           },
           "imports": [
