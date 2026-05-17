@@ -1,0 +1,48 @@
+@model IEnumerable<RentIO.Models.Gost>
+@{ ViewData["Title"] = "Gosti"; }
+
+<h2>Gosti</h2>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <form asp-action="Index" method="get" class="d-flex gap-2">
+            <input type="text" name="searchString" value="@ViewData["CurrentFilter"]"
+                   class="form-control" placeholder="Pretraži po imenu ili emailu..." />
+            <button type="submit" class="btn btn-outline-primary">Traži</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Resetiraj</a>
+        </form>
+    </div>
+    <div class="col-md-6 text-end">
+        <a asp-action="Create" class="btn btn-primary">+ Novi gost</a>
+    </div>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Ime i prezime</th>
+            <th>Email</th>
+            <th>Telefon</th>
+            <th>Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var g in Model)
+        {
+            <tr>
+                <td>@g.Ime @g.Prezime</td>
+                <td>@g.Email</td>
+                <td>@g.Telefon</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@g.Id" class="btn btn-sm btn-warning">Uredi</a>
+                    <a asp-action="Delete" asp-route-id="@g.Id" class="btn btn-sm btn-danger">Briši</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">Nema gostiju. <a asp-action="Create">Dodajte prvog gosta.</a></div>
+}

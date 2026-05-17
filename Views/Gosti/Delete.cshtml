@@ -1,0 +1,23 @@
+@model RentIO.Models.Gost
+@{ ViewData["Title"] = "Brisanje gosta"; }
+
+<h2>Potvrda brisanja</h2>
+<hr />
+
+<div class="alert alert-danger">Jeste li sigurni da želite obrisati ovog gosta?</div>
+
+<dl class="row">
+    <dt class="col-sm-3">Ime i prezime</dt>
+    <dd class="col-sm-9">@Model.Ime @Model.Prezime</dd>
+    <dt class="col-sm-3">Email</dt>
+    <dd class="col-sm-9">@Model.Email</dd>
+    <dt class="col-sm-3">Telefon</dt>
+    <dd class="col-sm-9">@Model.Telefon</dd>
+</dl>
+
+<form asp-action="Delete">
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-danger">Da, obriši</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Odustani</a>
+    </div>
+</form>

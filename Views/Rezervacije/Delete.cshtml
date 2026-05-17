@@ -1,0 +1,33 @@
+@model RentIO.Models.Rezervacija
+
+@{
+    ViewData["Title"] = "Brisanje rezervacije";
+}
+
+<h2>Potvrda brisanja</h2>
+<hr />
+
+<div class="alert alert-danger">
+    Jeste li sigurni da želite obrisati ovu rezervaciju? Ova akcija ne može se poništiti.
+</div>
+
+<dl class="row">
+    <dt class="col-sm-3">Gost</dt>
+    <dd class="col-sm-9">@Model.Gost?.Ime @Model.Gost?.Prezime</dd>
+
+    <dt class="col-sm-3">Apartman</dt>
+    <dd class="col-sm-9">@Model.Apartman?.Naziv</dd>
+
+    <dt class="col-sm-3">Termin</dt>
+    <dd class="col-sm-9">@Model.DatumDolaska.ToString("dd.MM.yyyy") — @Model.DatumOdlaska.ToString("dd.MM.yyyy")</dd>
+
+    <dt class="col-sm-3">Status</dt>
+    <dd class="col-sm-9">@Model.Status</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-danger">Da, obriši</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Odustani</a>
+    </div>
+</form>

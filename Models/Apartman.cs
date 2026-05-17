@@ -25,5 +25,7 @@ namespace RentIO.Models
         [StringLength(300,
             ErrorMessage = "Opis može imati maksimalno 300 znakova.")]
         public string Opis { get; set; } = string.Empty;
+
+        public ICollection<Rezervacija> Rezervacije { get; set; } = new List<Rezervacija>();
     }
 }

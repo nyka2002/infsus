@@ -1,0 +1,151 @@
+@model RentIO.ViewModels.RezervacijaViewModel
+
+@{
+    ViewData["Title"] = "Nova rezervacija";
+}
+
+<h2>Nova rezervacija</h2>
+<hr />
+
+<form asp-action="Create" method="post" id="rezervacija-form">
+    <div asp-validation-summary="All" class="alert alert-danger @(ViewData.ModelState.IsValid ? "d-none" : "")"></div>
+
+    @* ===== MASTER DIO: Zaglavlje rezervacije ===== *@
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Podaci o rezervaciji</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="GostId" class="form-label"></label>
+                    <select asp-for="GostId" asp-items="Model.GostiDropdown" class="form-select">
+                        <option value="">— Odaberite gosta —</option>
+                    </select>
+                    <span asp-validation-for="GostId" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="ApartmanId" class="form-label"></label>
+                    <select asp-for="ApartmanId" asp-items="Model.ApartmaniDropdown" class="form-select">
+                        <option value="">— Odaberite apartman —</option>
+                    </select>
+                    <span asp-validation-for="ApartmanId" class="text-danger"></span>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label asp-for="DatumDolaska" class="form-label"></label>
+                    <input asp-for="DatumDolaska" type="date" class="form-control" />
+                    <span asp-validation-for="DatumDolaska" class="text-danger"></span>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label asp-for="DatumOdlaska" class="form-label"></label>
+                    <input asp-for="DatumOdlaska" type="date" class="form-control" />
+                    <span asp-validation-for="DatumOdlaska" class="text-danger"></span>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label asp-for="Status" class="form-label"></label>
+                    <select asp-for="Status" asp-items="Model.StatusDropdown" class="form-select"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* ===== DETAIL DIO: Usluge rezervacije ===== *@
+    <div class="card mb-4">
+        <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Dodatne usluge</h5>
+            <button type="button" class="btn btn-light btn-sm" id="dodaj-uslugu">+ Dodaj uslugu</button>
+        </div>
+        <div class="card-body">
+            <table class="table" id="usluge-tablica">
+                <thead>
+                    <tr>
+                        <th>Usluga</th>
+                        <th>Količina</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="usluge-body">
+                    @for (int i = 0; i < Model.Usluge.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                <select name="Usluge[@i].UslugaId" class="form-select">
+                                    <option value="">— Odaberite uslugu —</option>
+                                    @foreach (var item in Model.UslugeDropdown)
+                                    {
+                                        if (item.Value == Model.Usluge[i].UslugaId.ToString())
+                                        {
+                                            <option value="@item.Value" selected>@item.Text</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@item.Value">@item.Text</option>
+                                        }
+                                    }
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" name="Usluge[@i].Kolicina" value="@Model.Usluge[i].Kolicina"
+                                       class="form-control" min="1" max="100" />
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-danger ukloni-uslugu">Ukloni</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <p class="text-muted small">Usluge su neobavezne. Možete dodati više stavki.</p>
+        </div>
+    </div>
+
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-success">Spremi rezervaciju</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Odustani</a>
+    </div>
+</form>
+
+@* Predložak za novu uslugu — JavaScript ga klonira kad korisnik klikne "Dodaj uslugu" *@
+<template id="usluga-template">
+    <tr>
+        <td>
+            <select name="Usluge[__INDEX__].UslugaId" class="form-select">
+                <option value="">— Odaberite uslugu —</option>
+                @foreach (var item in Model.UslugeDropdown)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </td>
+        <td>
+            <input type="number" name="Usluge[__INDEX__].Kolicina" value="1"
+                   class="form-control" min="1" max="100" />
+        </td>
+        <td>
+            <button type="button" class="btn btn-sm btn-danger ukloni-uslugu">Ukloni</button>
+        </td>
+    </tr>
+</template>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        let uslugeCount = @Model.Usluge.Count;
+
+        document.getElementById('dodaj-uslugu').addEventListener('click', function () {
+            const template = document.getElementById('usluga-template');
+            const tbody = document.getElementById('usluge-body');
+            const html = template.innerHTML.replace(/__INDEX__/g, uslugeCount);
+            const temp = document.createElement('tbody');
+            temp.innerHTML = html;
+            tbody.appendChild(temp.firstElementChild);
+            uslugeCount++;
+        });
+
+        document.getElementById('usluge-body').addEventListener('click', function (e) {
+            if (e.target.classList.contains('ukloni-uslugu')) {
+                e.target.closest('tr').remove();
+            }
+        });
+    </script>
+}

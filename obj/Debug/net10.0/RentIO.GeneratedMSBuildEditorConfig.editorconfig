@@ -1,0 +1,132 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFramework = net10.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.EntryPointFilePath = 
+build_property.RootNamespace = RentIO
+build_property.RootNamespace = RentIO
+build_property.ProjectDir = /Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 10.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Apartmani/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBhcnRtYW5pL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Apartmani/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBhcnRtYW5pL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Apartmani/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBhcnRtYW5pL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Apartmani/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBhcnRtYW5pL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Apartmani/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBhcnRtYW5pL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Gosti/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR29zdGkvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Gosti/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR29zdGkvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Gosti/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR29zdGkvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Gosti/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR29zdGkvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Rezervacije/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV6ZXJ2YWNpamUvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Rezervacije/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV6ZXJ2YWNpamUvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Rezervacije/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV6ZXJ2YWNpamUvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Rezervacije/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV6ZXJ2YWNpamUvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Rezervacije/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV6ZXJ2YWNpamUvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Usluge/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNsdWdlL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Usluge/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNsdWdlL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Usluge/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNsdWdlL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Usluge/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNsdWdlL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/karlorastegorac/Documents/FAKS/INFSUS/3. dz/infsus/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-kmkpakj43p

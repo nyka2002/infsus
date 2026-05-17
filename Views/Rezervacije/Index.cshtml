@@ -1,0 +1,63 @@
+@model IEnumerable<RentIO.Models.Rezervacija>
+
+@{
+    ViewData["Title"] = "Rezervacije";
+}
+
+<h2>Rezervacije</h2>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <form asp-action="Index" method="get" class="d-flex gap-2">
+            <input type="text" name="searchString" value="@ViewData["CurrentFilter"]"
+                   class="form-control" placeholder="Pretraži po gostu ili apartmanu..." />
+            <button type="submit" class="btn btn-outline-primary">Traži</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Resetiraj</a>
+        </form>
+    </div>
+    <div class="col-md-6 text-end">
+        <a asp-action="Create" class="btn btn-primary">+ Nova rezervacija</a>
+    </div>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Gost</th>
+            <th>Apartman</th>
+            <th>Dolazak</th>
+            <th>Odlazak</th>
+            <th>Status</th>
+            <th>Ukupno (€)</th>
+            <th>Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.Gost?.Ime @r.Gost?.Prezime</td>
+                <td>@r.Apartman?.Naziv</td>
+                <td>@r.DatumDolaska.ToString("dd.MM.yyyy")</td>
+                <td>@r.DatumOdlaska.ToString("dd.MM.yyyy")</td>
+                <td>
+                    <span class="badge @(r.Status == RentIO.Models.StatusRezervacije.Potvrđena ? "bg-success" :
+                                         r.Status == RentIO.Models.StatusRezervacije.Otkazana ? "bg-danger" : "bg-warning text-dark")">
+                        @r.Status
+                    </span>
+                </td>
+                <td>@r.UkupnaCijena.ToString("N2")</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@r.Id" class="btn btn-sm btn-info">Detalji</a>
+                    <a asp-action="Edit" asp-route-id="@r.Id" class="btn btn-sm btn-warning">Uredi</a>
+                    <a asp-action="Delete" asp-route-id="@r.Id" class="btn btn-sm btn-danger">Briši</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">Nema rezervacija. <a asp-action="Create">Kreirajte prvu.</a></div>
+}
