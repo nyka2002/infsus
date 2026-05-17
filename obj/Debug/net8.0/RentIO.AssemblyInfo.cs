@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RentIO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc2ee1c1fe0b7eae51d97350d039084961e24381")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66d3a3e5126f05c11c27ac9550db94a406e2918e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RentIO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RentIO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
