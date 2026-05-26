@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nika_m/infsus/dz3/RentIO/RentIO.Tests/RentIO.Tests.csproj": {}
+    "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/RentIO.Tests/RentIO.Tests.csproj": {}
   },
   "projects": {
-    "/Users/nika_m/infsus/dz3/RentIO/RentIO.csproj": {
+    "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/RentIO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nika_m/infsus/dz3/RentIO/RentIO.csproj",
+        "projectUniqueName": "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/RentIO.csproj",
         "projectName": "RentIO",
-        "projectPath": "/Users/nika_m/infsus/dz3/RentIO/RentIO.csproj",
-        "packagesPath": "/Users/nika_m/.nuget/packages/",
-        "outputPath": "/Users/nika_m/infsus/dz3/RentIO/obj/",
+        "projectPath": "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/RentIO.csproj",
+        "packagesPath": "/Users/karlorastegorac/.nuget/packages/",
+        "outputPath": "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nika_m/.nuget/NuGet/NuGet.Config"
+          "/Users/karlorastegorac/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -512,17 +512,17 @@
         }
       }
     },
-    "/Users/nika_m/infsus/dz3/RentIO/RentIO.Tests/RentIO.Tests.csproj": {
+    "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/RentIO.Tests/RentIO.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nika_m/infsus/dz3/RentIO/RentIO.Tests/RentIO.Tests.csproj",
+        "projectUniqueName": "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/RentIO.Tests/RentIO.Tests.csproj",
         "projectName": "RentIO.Tests",
-        "projectPath": "/Users/nika_m/infsus/dz3/RentIO/RentIO.Tests/RentIO.Tests.csproj",
-        "packagesPath": "/Users/nika_m/.nuget/packages/",
-        "outputPath": "/Users/nika_m/infsus/dz3/RentIO/RentIO.Tests/obj/",
+        "projectPath": "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/RentIO.Tests/RentIO.Tests.csproj",
+        "packagesPath": "/Users/karlorastegorac/.nuget/packages/",
+        "outputPath": "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/RentIO.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nika_m/.nuget/NuGet/NuGet.Config"
+          "/Users/karlorastegorac/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -535,8 +535,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/Users/nika_m/infsus/dz3/RentIO/RentIO.csproj": {
-                "projectPath": "/Users/nika_m/infsus/dz3/RentIO/RentIO.csproj"
+              "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/RentIO.csproj": {
+                "projectPath": "/Users/karlorastegorac/Documents/FAKS/INFSUS/3_dz/infsus/RentIO.csproj"
               }
             }
           }
