@@ -187,7 +187,7 @@ namespace RentIO.Controllers
                     vm.ApartmanId, vm.DatumDolaska, vm.DatumOdlaska, noveUsluge);
 
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details), new { id = id });
             }
 
             await PopuniDropdownove(vm);

@@ -60,7 +60,7 @@ namespace RentIO.Controllers
             {
                 _context.Update(usluga);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details), new { id = usluga.Id });
             }
             return View(usluga);
         }

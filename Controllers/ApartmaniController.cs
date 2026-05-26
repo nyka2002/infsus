@@ -121,7 +121,7 @@ namespace RentIO.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details), new { id = apartman.Id });
             }
             return View(apartman);
         }
