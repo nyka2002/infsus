@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using RentIO.ViewModels;
 
 namespace RentIO.Controllers
 {
+    [Authorize]
     public class RezervacijeController : Controller
     {
         private readonly ApplicationDbContext _context;

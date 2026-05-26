@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RentIO.Data;
@@ -5,6 +6,7 @@ using RentIO.Models;
 
 namespace RentIO.Controllers
 {
+    [Authorize]
     public class UslugeController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -60,7 +62,7 @@ namespace RentIO.Controllers
             {
                 _context.Update(usluga);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Details), new { id = usluga.Id });
+                return RedirectToAction(nameof(Index));
             }
             return View(usluga);
         }

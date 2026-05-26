@@ -1,0 +1,52 @@
+@model RentIO.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Prijava";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RentIO – Prijava</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-center mb-4">
+                            <strong>RentIO</strong>
+                        </h3>
+                        <h5 class="text-center text-muted mb-4">Admin prijava</h5>
+
+                        <form asp-action="Index" method="post">
+                            <div asp-validation-summary="All" class="alert alert-danger" style="display:@(ViewData.ModelState.IsValid ? "none" : "block")"></div>
+
+                            <div class="mb-3">
+                                <label asp-for="KorisnickoIme" class="form-label"></label>
+                                <input asp-for="KorisnickoIme" class="form-control" placeholder="Unesite korisničko ime" />
+                                <span asp-validation-for="KorisnickoIme" class="text-danger small"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label asp-for="Lozinka" class="form-label"></label>
+                                <input asp-for="Lozinka" class="form-control" placeholder="Unesite lozinku" />
+                                <span asp-validation-for="Lozinka" class="text-danger small"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Prijavi se</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

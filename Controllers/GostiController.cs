@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RentIO.Data;
@@ -5,6 +6,7 @@ using RentIO.Models;
 
 namespace RentIO.Controllers
 {
+    [Authorize]
     public class GostiController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -62,7 +64,7 @@ namespace RentIO.Controllers
             {
                 _context.Update(gost);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Details), new { id = gost.Id });
+                return RedirectToAction(nameof(Index));
             }
             return View(gost);
         }
