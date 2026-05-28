@@ -19,3 +19,8 @@ appsettings.Development.json
 # NuGet
 *.nupkg
 packages/
+
+# DB store
+*.db
+*.db-shm
+*.db-wal
