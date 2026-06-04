@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+             id="provjeriDostupnostDefinitions"
+             name="Provjera dostupnosti apartmana"
+             namespace="http://camunda.org/schema/1.0/dmn">
+
+  <decision id="provjeriDostupnost" name="Provjeri dostupnost apartmana">
+    <decisionTable id="decisionTable_1" hitPolicy="FIRST">
+      <input id="input_apartmanId" label="Apartman ID">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text>apartmanId</text>
+        </inputExpression>
+      </input>
+      <output id="output_dostupno" label="Dostupno" name="dostupno" typeRef="boolean" />
+      <rule id="rule_zauzet">
+        <inputEntry id="inputEntry_zauzet">
+          <text>"zauzet"</text>
+        </inputEntry>
+        <outputEntry id="outputEntry_false">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="rule_dostupno">
+        <inputEntry id="inputEntry_ostalo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="outputEntry_true">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

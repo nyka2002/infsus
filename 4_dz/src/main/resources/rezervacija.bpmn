@@ -12,10 +12,14 @@
       <bpmn:outgoing>Flow_0tegcwg</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_0tegcwg" sourceRef="Activity_10uyu9j" targetRef="Activity_0brny3p" />
-    <bpmn:serviceTask id="Activity_0brny3p" name="Provjeri dostupnost" camunda:delegateExpression="${provjeriDostupnost}">
+    <bpmn:businessRuleTask id="Activity_0brny3p" name="Provjeri dostupnost"
+        camunda:decisionRef="provjeriDostupnost"
+        camunda:decisionRefBinding="latest"
+        camunda:mapDecisionResult="singleEntry"
+        camunda:resultVariable="dostupno">
       <bpmn:incoming>Flow_0tegcwg</bpmn:incoming>
       <bpmn:outgoing>Flow_1c1g4mo</bpmn:outgoing>
-    </bpmn:serviceTask>
+    </bpmn:businessRuleTask>
     <bpmn:exclusiveGateway id="Gateway_13ihej1" name="Termin dostupan?">
       <bpmn:incoming>Flow_1c1g4mo</bpmn:incoming>
       <bpmn:outgoing>Flow_0rj8bey</bpmn:outgoing>
