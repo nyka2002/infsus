@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>RentIO – Rezervacija</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <h2 class="mb-1">RentIO – Rezervacija apartmana</h2>
+            <p class="text-muted mb-4">Svaki korak šalje signal Camunda procesu.</p>
+
+            <!-- Korak 1 -->
+            <div class="card mb-4">
+                <div class="card-header fw-bold">Korak 1 – Pokreni proces</div>
+                <div class="card-body">
+                    <p class="text-muted small">Kreira novu instancu procesa u Camundi. Dobit ćeš Process Instance ID.</p>
+                    <form action="/rezervacija/pokreni" method="post">
+                        <button type="submit" class="btn btn-primary">Pokreni rezervaciju</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Korak 2 -->
+            <div class="card mb-4">
+                <div class="card-header fw-bold">Korak 2 – Unesi podatke rezervacije</div>
+                <div class="card-body">
+                    <p class="text-muted small">
+                        Upiši Process Instance ID iz koraka 1.<br>
+                        Za testiranje nedostupnosti upiši <code>zauzet</code> kao Apartman ID.
+                    </p>
+                    <form action="/rezervacija/podaci" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Process Instance ID</label>
+                            <input type="text" name="processInstanceId" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Apartman ID</label>
+                            <input type="text" name="apartmanId" class="form-control" placeholder="npr. APT-01" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Datum dolaska</label>
+                            <input type="date" name="datumDolaska" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Datum odlaska</label>
+                            <input type="date" name="datumOdlaska" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Pošalji podatke</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Korak 3 -->
+            <div class="card mb-4">
+                <div class="card-header fw-bold">Korak 3 – Potvrdi plaćanje</div>
+                <div class="card-body">
+                    <p class="text-muted small">Šalje poruku <code>PlacanjePotvrdeno</code> procesu koji čeka.</p>
+                    <form action="/rezervacija/plati" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Process Instance ID</label>
+                            <input type="text" name="processInstanceId" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning">Potvrdi plaćanje</button>
+                    </form>
+                </div>
+            </div>
+
+            <a href="http://localhost:8080/camunda" target="_blank" class="btn btn-outline-secondary">
+                Otvori Camunda Cockpit →
+            </a>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
